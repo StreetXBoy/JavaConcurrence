@@ -38,8 +38,9 @@ public class AtomicCompareVolatile {
             }).start();
         }
         //why is 2?? 有守护线程
-        while (Thread.activeCount()>2)
+        while (Thread.activeCount()>2) {
             Thread.yield();
+        }
         System.out.println(test.inc);
     }
 }
